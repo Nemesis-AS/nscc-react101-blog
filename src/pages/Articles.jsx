@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Articles = () => {
     return (
@@ -17,7 +17,10 @@ const Articles = () => {
                 <div className="text-4xl px-4 text-center my-4">Posts</div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-                    <a className="border border-black transition duration-300 cursor-pointer hover:shadow-black-8 hover:-translate-x-2 hover:-translate-y-2 rounded-lg">
+                    <Link
+                        to="/blog/first"
+                        className="border border-black transition duration-300 cursor-pointer hover:shadow-black-8 hover:-translate-x-2 hover:-translate-y-2 rounded-lg"
+                    >
                         <img
                             src="React1.jpg"
                             alt="React Image"
@@ -36,7 +39,7 @@ const Articles = () => {
 
                             <div className="font-bold">Read More &rarr;</div>
                         </div>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

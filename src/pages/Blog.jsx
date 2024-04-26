@@ -5,7 +5,7 @@ import rehypeRaw from "rehype-raw";
 
 import BlogMD from "../data/React1.md";
 
-const Blog = ({ blogData }) => {
+const Blog = () => {
     const [markdown, setMarkdown] = useState("");
 
     async function fetchMarkdownFile() {
@@ -21,7 +21,7 @@ const Blog = ({ blogData }) => {
 
     return (
         <article>
-            <div className={`w-full h-[60vh] bg-[url('./React1.jpg')] bg-cover bg-center top-0 left-0 -z-10 sticky`}></div>
+            <div className={`w-full h-[60vh] bg-[url('/React1.jpg')] bg-cover bg-center top-0 left-0 -z-10 sticky`}></div>
 
             <div className="w-full bg-white border-t-8 border-black">
                 <div className="max-w-4xl mx-auto bg-white px-4">

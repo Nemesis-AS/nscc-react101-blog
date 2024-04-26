@@ -3,16 +3,22 @@ import Footer from "./components/Footer";
 import Blog from "./pages/Blog";
 import Articles from "./pages/Articles";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
     return (
         <>
-            <Header />
-            <main className="pt-16">
-                {/* <Blog /> */}
-                <Articles />
-            </main>
-            <Footer />
+            <BrowserRouter>
+                <Header />
+                <main className="pt-16">
+                    <Routes>
+                        <Route path="/" Component={ Articles } />
+                        <Route path="/blog/:slug" Component={ Blog } />
+                    </Routes>
+                </main>
+                <Footer />
+            </BrowserRouter>
         </>
     );
 }

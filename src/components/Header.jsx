@@ -1,16 +1,16 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
         <header className="fixed w-full bg-white shadow-md p-4 lg:px-8 flex justify-between">
-            <a href="/" className="title text-2xl font-bold underline">
+            <Link to="/" className="title text-2xl font-bold underline">
                 React Blog
-            </a>
+            </Link>
 
             <div className="flex gap-4 items-center">
-                <a href="#" className="underline">
+                <Link to="/" className="underline">
                     Posts
-                </a>
+                </Link>
                 <button>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
